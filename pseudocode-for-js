@@ -1,0 +1,48 @@
+I want to have a function that allows me to decide the winner
+
+
+
+let playerSelection-lower = playerSelection.toLowerCase()
+
+
+
+If user inputs rock and computer inputs rock then
+= draw = replay round
+
+If user inputs rock and computer inputs paper then
+= You Lose! Paper beats Rock
+
+If user inputs rock and computer inputs scissors then =
+You win! Rock beats Scissors
+
+
+If user inputs scissors and computer inputs scissors then
+= draw = replay round
+
+If user inputs scissors and computer inputs rock then
+= You lose! Rock beats scissors
+
+If user inputs scissors and computer inputs paper then 
+= You win! Scissors beats paper
+
+
+If user inputs paper and computer inputs paper then 
+= draw = replay round
+
+If user inputs paper and computer inputs scissors then 
+= You lose! Scissors beats paper!
+
+If user inputs paper and computer inputs rock then
+= You win! Paper beats rock!
+
+
+let tie =
+
+[playerSelection = rock && computerSelection = rock] ||
+[playerSelection = paper && computerSelection = paper] ||
+[playerSelection = scissor && computerSelection = scissor]
+
+if (tie) {
+    replay round (don't let this count as an official round of the 5 rounds)
+    return playRound(playerSelection, computerSelection)
+}
