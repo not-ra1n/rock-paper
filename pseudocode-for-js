@@ -46,3 +46,17 @@ if (tie) {
     replay round (don't let this count as an official round of the 5 rounds)
     return playRound(playerSelection, computerSelection)
 }
+
+
+Create a game function that used the previous function to play a best-of-five game that keeps score and reports a winner or loser at the end 
+
+If you win, then increment your score by 1
+
+If you lose, increment computer score by 1
+
+If you have 3 wins, register "You won the best of 5!"
+
+If computer has 3 wins, register "You lost! The computer won the best of !"
+
+
+   
