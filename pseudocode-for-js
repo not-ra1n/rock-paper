@@ -57,6 +57,3 @@ If you lose, increment computer score by 1
 If you have 3 wins, register "You won the best of 5!"
 
 If computer has 3 wins, register "You lost! The computer won the best of !"
-
-
-   
