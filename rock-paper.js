@@ -32,54 +32,60 @@ function playRound(playerSelectionLower, computerSelection) {
         return "Answer must be 'rock' or 'paper' or 'scissors'.";
     }
 } 
-
-let computerSelection = getComputerChoice();
 const score = {};
 score.playerWins = 0;
 score.computerWins = 0;
 
-// function game() {
-
-   // while(score["playerWins"] < 3 && score["computerWins"] < 3) {
-   //     let playerSelectionLower = prompt("Play against the computer in rock, paper, scissors! / Input: Rock, Paper, or Scissors.");
-   //     playerSelectionLower = playerSelectionLower.toLowerCase();
-   //     if (playerSelectionLower === null) {
-    //        return;
-    //    } else {
-   //        console.log(playRound(playerSelectionLower, computerSelection));
-  //      }
- //   }
-
- //   if (score["playerWins"] === 3) {
- //       return "You won the best of 5 against the computer!";
-//    } else {
- //       return "You lost the best of 5 against the computer! Try again!";
- //   } 
-// } 
-
-
-const rock = document.querySelector('#Rock');
-rock.addEventListener('click', () => {
-    round = (playRound("rock", computerSelection));
-    const chicken = document.querySelector('#result');
-    chicken.textContent = round;
-});
-
-const paper = document.querySelector('#Paper');
-paper.addEventListener('click', () => {
-    round = (playRound("paper", computerSelection));
-    const chicken = document.querySelector('#result');
-    chicken.textContent = round;
-});
-
-const scissors = document.querySelector('#Scissors');
-scissors.addEventListener('click', () => {
-    round = (playRound("scissors", computerSelection));
-    const chicken = document.querySelector('#result');
-    chicken.textContent = round;
-});
-
-
-
-
-// console.log(game());
+    const rock = document.querySelector('#Rock');
+    rock.addEventListener('click', () => {
+        computerSelection = getComputerChoice();
+        round = (playRound("rock", computerSelection));
+        const result = document.querySelector('#result');
+        result.textContent = round;
+        if (score["playerWins"] === 5) {
+            result.textContent = "You won against the computer!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+        if(score["computerWins"] === 5) {
+            result.textContent = "You lost against the computer! Try again!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+    });
+    
+    const paper = document.querySelector('#Paper');
+    paper.addEventListener('click', () => {
+        computerSelection = getComputerChoice();
+        round = (playRound("paper", computerSelection));
+        const result = document.querySelector('#result');
+        result.textContent = round;
+        if (score["playerWins"] === 5) {
+            result.textContent = "You won against the computer!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+        if(score["computerWins"] === 5) {
+            result.textContent = "You lost against the computer! Try again!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+    });
+    
+    const scissors = document.querySelector('#Scissors');
+    scissors.addEventListener('click', () => {
+        computerSelection = getComputerChoice();
+        round = (playRound("scissors", computerSelection));
+        const result = document.querySelector('#result');
+        result.textContent = round;
+        if (score["playerWins"] === 5) {
+            result.textContent = "You won against the computer!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+        if(score["computerWins"] === 5) {
+            result.textContent = "You lost against the computer! Try again!"; 
+            score["playerWins"] = 0;
+            score["computerWins"] = 0;
+        }
+    });
